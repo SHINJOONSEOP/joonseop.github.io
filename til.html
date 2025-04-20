@@ -12,15 +12,19 @@
       <a href="index.html">홈</a>
     </nav>
   </header>
-  <main>
-    <h2>[2025-04-20]</h2>
-    <ul>
-      <li>HTML 파일 여러 개를 만들어 페이지를 연결하는 법을 익힘</li>
-      <li>GitHub Pages로 무료 배포가 가능하다는 걸 배움</li>
-    </ul>
-  </main>
+
+  <main id="content">로딩 중...</main>
+
   <footer>
     <p>&copy; 2025. All rights reserved.</p>
   </footer>
+
+  <!-- 마크다운 렌더링 스크립트 -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="markdown-viewer.js"></script>
+  <script>
+    // 보여줄 파일 경로 (수동 또는 동적으로 변경 가능)
+    loadMarkdown("posts/til/2025-04-20.md");
+  </script>
 </body>
 </html>

@@ -15,13 +15,19 @@
     </nav>
   </header>
 
-  <main>
-    <h2>[2025-04-20]</h2>
-    <p>📌 GitHub Pages로 첫 홈페이지 배포 완료! HTML 구조도 조금씩 익히는 중.</p>
-  </main>
+  <main id = "content">로딩 중...</main>
 
   <footer>
     <p>&copy; 2025. All rights reserved.</p>
   </footer>
+
+  <!-- 마크다운 렌더링 스크립트 -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="markdown-viewer.js"></script>
+  <script>
+    // 보여줄 파일 경로 (수동 또는 동적으로 변경 가능)
+    loadMarkdown("posts/devlog/2025-04-20.md");
+  </script>
+
 </body>
 </html>

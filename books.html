@@ -12,15 +12,20 @@
       <a href="index.html">홈</a>
     </nav>
   </header>
-  <main>
-    <h2>『Do it! 점프 투 파이썬』</h2>
-    <p>→ 기본 문법, 자료형, 제어문 복습 완료. 예제로 직접 실습 중요!</p>
 
-    <h2>『나는 프로그래머다』</h2>
-    <p>→ 개발자 커리어 설계와 성장 전략에 대한 통찰 얻음.</p>
-  </main>
+  <main id="content">로딩 중...</main>
+
   <footer>
     <p>&copy; 2025. All rights reserved.</p>
   </footer>
+
+  <!-- 마크다운 렌더링 스크립트 -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="markdown-viewer.js"></script>
+  <script>
+    // 보여줄 파일 경로 (수동 또는 동적으로 변경 가능)
+    loadMarkdown("posts/books/부의추월차선.md");
+  </script>
+
 </body>
 </html>

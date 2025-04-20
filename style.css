@@ -32,4 +32,16 @@ nav a:hover{
     text-decoration: underline;
 }
 
-
+/* 프로필 섹션 스타일 */
+.profile {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* 동그랗게 만들기 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    margin-bottom: 1rem;
+  }
