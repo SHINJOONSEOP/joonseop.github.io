@@ -45,3 +45,19 @@ nav a:hover{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
     margin-bottom: 1rem;
   }
+
+  footer .contact {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  footer .contact a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 0.3rem;
+  }
+  
+  footer .contact a:hover {
+    text-decoration: underline;
+    color: #fff;
+  }
