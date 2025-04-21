@@ -11,8 +11,11 @@
     <header> 
         <h1>신준섭의 성장일지 🌱</h1> <!-- 메인 제목 -->
 
+        <!-- 햄버거 버튼 -->
+        <button class="menu-toggle" onclick="toggleMenu()">=</button>
+
         <!-- 네비게이션 메뉴 -->
-        <nav>
+        <nav id="main-nav">
             <a href="devlog.html">자기개발 일지</a>  <!-- 내부 페이지 링크 -->
             <a href="books.html">독서 기록</a>
             <a href="til.html">TIL</a>
@@ -38,5 +41,14 @@
           📓 <a href="https://www.notion.so/496bf881e03d42bc97dbffacdccfb3d9" target="_blank">Notion</a>
         </p>
       </footer>
+
+    <!-- 메뉴 열고 닫기 기능 -->
+    <script>
+    function toggleMenu() {
+        const nav = document.getElementById("main-nav");
+        nav.classList.toggle("show");
+    }
+    </script>
+    
 </body>
 </html>

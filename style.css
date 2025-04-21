@@ -1,70 +1,83 @@
 /* 전체 페이지에 적용할 글꼴, 배경, 여백 설정 */
-body{
-    font-family: 'Arial', sans-serif; /* 산세리프 글꼴 */
-    margin: 0; /* 바깥 여백 제거 */
-    padding: 0; /* 안쪽 여백 제거 */
-    background: #f4f4f4; /* 연회색 배경 */
-    color: #333; /* 글자색 진한 회색 */
+body {
+  font-family: 'Arial', sans-serif; /* 산세리프 글꼴 */
+  margin: 0; /* 바깥 여백 제거 */
+  padding: 0; /* 안쪽 여백 제거 */
+  background: #f4f4f4; /* 연회색 배경 */
+  color: #333; /* 글자색 진한 회색 */
 }
 
 /* 상단/하단 공통 스타일 */
-header,footer{
-    background: #333; /* 진한 회색 배경 */
-    color: white; /* 글자색 흰색 */
-    text-align: center; /* 가운데 정렬 */
-    padding: 1rem; /* 패딩 1단위 */
+header, footer {
+  background: #333; /* 진한 회색 배경 */
+  color: white; /* 글자색 흰색 */
+  text-align: center; /* 가운데 정렬 */
+  padding: 1rem; /* 패딩 1단위 */
+  position: relative; /* 메뉴버튼 포지션 기준점 */
 }
 
 /* 본문 영역 */
-main{
-    padding: 2rem; /* 넉넉한 안쪽 여백 */
+main {
+  padding: 2rem; /* 넉넉한 안쪽 여백 */
 }
 
 /* 상단 메뉴 링크 스타일 */
-nav a{
-    color: white; /* 링크 글자색 흰색 */
-    margin: 0 1rem; /* 좌우 간격 */
-    text-decoration: none; /* 밑줄 제거 */
+nav a {
+  color: white; /* 링크 글자색 흰색 */
+  margin: 0 1rem; /* 좌우 간격 */
+  text-decoration: none; /* 밑줄 제거 */
 }
 
 /* 마우스 오버 시 밑줄 표시 */
-nav a:hover{
-    text-decoration: underline;
+nav a:hover {
+  text-decoration: underline;
 }
 
 /* 프로필 섹션 스타일 */
 .profile {
-    text-align: center;
-    margin-top: 2rem;
-  }
-  
-  .profile img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%; /* 동그랗게 만들기 */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
-    margin-bottom: 1rem;
-  }
+  text-align: center;
+  margin-top: 2rem;
+}
 
-  footer .contact {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-  }
-  
-  footer .contact a {
-    color: #ccc;
-    text-decoration: none;
-    margin: 0 0.3rem;
-  }
-  
-  footer .contact a:hover {
-    text-decoration: underline;
-    color: #fff;
-  }
+.profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* 동그랗게 만들기 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+  margin-bottom: 1rem;
+}
 
+/* footer 연락처 링크 스타일 */
+footer .contact {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
 
+footer .contact a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 0.3rem;
+}
 
-/* 📱 모바일 화면용 반응형 스타일 */
+footer .contact a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+/* 햄버거 메뉴 버튼 (모바일에서만 보임) */
+.menu-toggle {
+  display: none; /* 기본은 숨김 */
+  font-size: 1.5rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+/* 📱 모바일 반응형 스타일 */
 @media (max-width: 768px) {
   body {
     font-size: 16px;
@@ -74,8 +87,21 @@ nav a:hover{
     padding: 1rem 0.5rem;
   }
 
-  nav a {
-    display: block;
+  nav#main-nav {
+    display: none;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  nav#main-nav.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block; /* 모바일에서 버튼 보이게 */
+  }
+
+  nav#main-nav a {
     margin: 0.5rem 0;
   }
 
